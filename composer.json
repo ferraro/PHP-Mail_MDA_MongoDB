@@ -1,0 +1,11 @@
+{
+    "name": "ferraro/php_mail_mda_mongodb",
+    "description": "Postfix compatible MDA for saving messages inside a MongoDB.",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.4.6",
+	"swiftmailer/swiftmailer": ">=4.3-dev"
+    }
+}
