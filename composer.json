@@ -6,6 +6,6 @@
     },
     "require": {
         "php": ">=5.4.6",
-	"swiftmailer/swiftmailer": ">=4.3-dev"
+	"messaged/php-mime-mail-parser": "dev-master"
     }
 }

@@ -1,0 +1,53 @@
+From saf@archivum.info  Wed Dec 12 21:29:03 2012
+Return-Path: <saf@archivum.info>
+X-Spam-Checker-Version: SpamAssassin 3.3.2 (2011-06-06) on archivum.info
+X-Spam-Level: 
+X-Spam-Status: No, score=0.0 required=5.0 tests=NO_RELAYS,T_DKIM_INVALID
+	       autolearn=disabled version=3.3.2
+X-Original-To: stephan@ferraro.net
+Delivered-To: saf@localhost
+Received: by archivum.info (Postfix, from userid 1000)
+	  id 8922A43C4636; Wed, 12 Dec 2012 21:29:03 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=ferraro.net; s=2012;
+		t=1355344143; bh=XrpchJs7UB0RBy8mL+qsbOgmOAX93/1OXO/8nqmB8Eo=;
+		h=Date:From:To:Subject;
+		b=X5yL0o61zkDkP2DSNrYwFxiCpdzz9tJiadM/92cwVvhVUwP+ucmFhfXs3HU4d+v27
+		 99wXO8e4pbkbgORg5e4CB1GlQPyhCGGGTuFAzWJAR/o4wxsG4A2B8yXlqbECUt0aZA
+		  iaz1JlA+LGmDKniwOgdnIj+tqSGFyL1AGlkLFNk/BXHlykF2nTeTpHbzS+1c/KSAQP
+		   ohlt7U0u48Zh9Hejg6IsoEsHfYRrqm5xL9z5/SOYwWXWFcf40m7J9KMkmxKfFRs39v
+		    lB4HdZYThctnV44qoEFdhns+UtgD2c+cyjRlhK2DO5vceFvr1HPduEQU8dp+xcC8FH
+		     vhl0FSwHbkQD2wArBXqKvEJ2vThnHsXtd7cFhAgObSfukzZ6VYnaKTdhRAukV7drPT
+		      S6XbuRCtvTGPGKo1ui2gwus6Dst1BvOXQ36gZVT/PO4iNneiNUROWlKDlBsuBE22KR
+		       sDMAgOPRNicEDgpmuNqT396lPTdVhxA338OTEr5jQm67Xs+Rk69DuI7oMm4/Gu5IsE
+		        jBlVRSN0r0dmWF3Rf9NCdjhW+IfPscxzWkDC0cv6VB/hZKvinusyE275mQa61Zpw0R
+			 Iz6lXhgVXBGGZJ5V03zsOUKjBCzdrvTLAVyHDomUMxyFDiOs6DLIF2/FfcM04ycidB
+			  0W2jE4O5ZH8C+9i3qyll2Q7s=
+Date: Wed, 12 Dec 2012 21:29:03 +0100
+From: Stephan Ferraro <contact@ferraro.net>
+To: stephan@ferraro.net
+Subject: [SYS] test
+Message-ID: <20121212202903.GA21168@archivum.info>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+User-Agent: Mutt/1.5.21 (2010-09-15)
+Status: RO
+Content-Length: 442
+Lines: 14
+
+test
+-- 
+Best regards,
+Stephan FERRARO
+Director & Member - Ferraro Ltd. - IT Linux & UNIX solutions
+GnuPG public key: curl -s http://de.trashmail.net/ferraro.gpg | gpg --import
+
+Rechtliche Informationen:
+-------------------------
+Name der Gesellschaft:			Ferraro Ltd.
+Gesellschafter und Geschäftsführer:	Stephan Ferraro
+Registergericht:   				Amtsgericht Stuttgart
+Registernummer:								HRB 724764
+Umsatzsteuer-Indentifikationsnummer:					DE814799566
+
