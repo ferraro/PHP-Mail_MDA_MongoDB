@@ -1,0 +1,23 @@
+<?php
+/*
+ * PHP-Mail_MDA_MongoDB
+ *
+ * Configuration file
+ *
+ * License: GPL 3
+ *
+ * (C) Stephan Ferraro <stephan@ferraro.net>, 2012 Ferraro Ltd., Germany - Stuttgart
+ */
+class MDAMongoDbConfig {
+	static $MONGO_URL			= 'mongodb://localhost';
+	static $MONGO_DB_NAME		= 'test';
+	static $MONGO_COLLECTION	= 'test';
+
+	# Authentification
+	static $MONGO_USE_AUTH		=  true;
+	static $MONGO_USER			= 'root';
+	static $MONGO_PASSWORD		= 'root';
+
+	// Contact message in case of a failure of this mda script (e.g. mongodb server is down)
+	static $MONGO_CONTACT		= 'Please contact root@foobar.tld.';
+}

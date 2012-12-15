@@ -1,7 +1,7 @@
 PHP-Mail_MDA_MongoDB
 ====================
 
-Postfix compatible MDA written in PHP for saving messages inside a MongoDB.
+Postfix store emails on MongoDB using PHP.
 
 INSTALLATION
 ============
