@@ -58,3 +58,8 @@ Note: In this example the mda.php script has been installed at /var/www/my10minu
 Additionally please check if you need "virtual_mailbox_maps = mongodb:/etc/postfix/mongodb-aliases.cf", this is only used
 if you use virutal address mapping with mongodb. In this case you need the Postfix version of MongoDB of
 https://github.com/ferraro/postfix-mongodb which has an example in its README.md file how looks the /etc/postfix/mongodb-aliases.cf file.
+
+LICENSE
+=======
+GPL 3 - GNU GENERAL PUBLIC LICENSE version 3: http://www.gnu.org/licenses/gpl-3.0.en.html
+
