@@ -1,0 +1,40 @@
+From saf@archivum.info  Wed Dec 12 21:29:03 2012
+Return-Path: <saf@archivum.info>
+X-Spam-Checker-Version: SpamAssassin 3.3.2 (2011-06-06) on archivum.info
+X-Spam-Level: 
+X-Spam-Status: No, score=0.0 required=5.0 tests=NO_RELAYS,T_DKIM_INVALID
+	       autolearn=disabled version=3.3.2
+X-Original-To: stephan@ferraro.net
+Delivered-To: saf@localhost
+Received: by archivum.info (Postfix, from userid 1000)
+	  id 8922A43C4636; Wed, 12 Dec 2012 21:29:03 +0100 (CET)
+Date: Wed, 12 Dec 2012 21:29:03 +0100
+From: Stephan Ferraro <contact@ferraro.net>
+To: stephan@ferraro.net
+Subject: [SYS] test
+Message-ID: <20121212202903.GA21168@archivum.info>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=iso8559-15
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+User-Agent: Mutt/1.5.21 (2010-09-15)
+Status: RO
+Content-Length: 442
+Lines: 14
+
+test
+äöü¤
+-- 
+Best regards,
+Stephan FERRARO
+Director & Member - Ferraro Ltd. - IT Linux & UNIX solutions
+GnuPG public key: curl -s http://de.trashmail.net/ferraro.gpg | gpg --import
+
+Rechtliche Informationen:
+-------------------------
+Name der Gesellschaft:			Ferraro Ltd.
+Gesellschafter und Geschäftsführer:	Stephan Ferraro
+Registergericht:   				Amtsgericht Stuttgart
+Registernummer:								HRB 724764
+Umsatzsteuer-Indentifikationsnummer:					DE814799566
+
