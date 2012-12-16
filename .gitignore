@@ -3,4 +3,5 @@ composer.lock
 composer.phar
 .DS_Store
 ._.DS_Store
+._README.md
 src/mda_config.php

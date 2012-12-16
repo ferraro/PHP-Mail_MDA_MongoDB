@@ -1,0 +1,66 @@
+# See /usr/share/postfix/main.cf.dist for a commented, more complete version
+
+
+# Debian specific:  Specifying a file name will cause the first
+# line of that file to be used as the name.  The Debian default
+# is /etc/mailname.
+#myorigin = /etc/mailname
+
+smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)
+biff = no
+
+# appending .domain is the MUA's job.
+append_dot_mydomain = no
+
+# Uncomment the next line to generate "delayed mail" warnings
+#delay_warning_time = 4h
+
+readme_directory = no
+
+# TLS parameters
+smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+smtpd_use_tls=yes
+smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+
+# See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
+# information on enabling SSL in the smtp client.
+
+myhostname = mongo
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+mydestination = mongo, localhost.localdomain, , localhost
+relayhost = 
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+
+# my10minutemail.com mongodb alias test
+myorigin = my10minutemail.com
+virtual_mailbox_domains = my10minutemail.com
+virtual_mailbox_maps = mongodb:/etc/postfix/mongodb-aliases.cf
+virtual_mailbox_base = /var/mail
+virtual_minimum_uid = 65534
+virtual_uid_maps = static:65534
+virtual_gid_maps = static:65534
+virtual_mailbox_limit = 0
+# *** Use the mongodb  agent for the transport, to store messages inside MongoDB ***
+virtual_transport = mongodb:
+# MongoDB is limited to 4 MB by file attachment, so limit messages completly to 4 MB
+message_size_limit = 4000000
+
+sample_directory = /etc/postfix
+sendmail_path = /usr/sbin/sendmail
+html_directory = no
+setgid_group = postdrop
+command_directory = /usr/sbin
+manpage_directory = /usr/local/man
+daemon_directory = /usr/lib/postfix
+newaliases_path = /usr/bin/newaliases
+mailq_path = /usr/bin/mailq
+queue_directory = /var/spool/postfix
+mail_owner = postfix
+data_directory = /var/lib/postfix
+inet_protocols = ipv4

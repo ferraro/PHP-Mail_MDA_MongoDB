@@ -11,7 +11,7 @@ REQUIREMENTS
 
 FILES
 =====
-- mda_config.php Configuration file
+- mda_config.php.dist Configuration example file
 - mda.php Mail Delivery Agent called by Postfix
 - main.cf Postfix example main configuration file
 - master.cf Postfix example master configuration file
@@ -24,6 +24,10 @@ After extracting the GIT repository, run the following commands:
 
     curl -s https://getcomposer.org/installer | php
     php composer.phar update
+
+Copy mda_config.php.dist to mda_config.php file:
+
+	cp mda_config.php.dist mda_config.php
 
 Edit /etc/postfix/main.cf file and add the following entries:
 
