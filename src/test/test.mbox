@@ -8,20 +8,6 @@ X-Original-To: stephan@ferraro.net
 Delivered-To: saf@localhost
 Received: by archivum.info (Postfix, from userid 1000)
 	  id 8922A43C4636; Wed, 12 Dec 2012 21:29:03 +0100 (CET)
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=ferraro.net; s=2012;
-		t=1355344143; bh=XrpchJs7UB0RBy8mL+qsbOgmOAX93/1OXO/8nqmB8Eo=;
-		h=Date:From:To:Subject;
-		b=X5yL0o61zkDkP2DSNrYwFxiCpdzz9tJiadM/92cwVvhVUwP+ucmFhfXs3HU4d+v27
-		 99wXO8e4pbkbgORg5e4CB1GlQPyhCGGGTuFAzWJAR/o4wxsG4A2B8yXlqbECUt0aZA
-		  iaz1JlA+LGmDKniwOgdnIj+tqSGFyL1AGlkLFNk/BXHlykF2nTeTpHbzS+1c/KSAQP
-		   ohlt7U0u48Zh9Hejg6IsoEsHfYRrqm5xL9z5/SOYwWXWFcf40m7J9KMkmxKfFRs39v
-		    lB4HdZYThctnV44qoEFdhns+UtgD2c+cyjRlhK2DO5vceFvr1HPduEQU8dp+xcC8FH
-		     vhl0FSwHbkQD2wArBXqKvEJ2vThnHsXtd7cFhAgObSfukzZ6VYnaKTdhRAukV7drPT
-		      S6XbuRCtvTGPGKo1ui2gwus6Dst1BvOXQ36gZVT/PO4iNneiNUROWlKDlBsuBE22KR
-		       sDMAgOPRNicEDgpmuNqT396lPTdVhxA338OTEr5jQm67Xs+Rk69DuI7oMm4/Gu5IsE
-		        jBlVRSN0r0dmWF3Rf9NCdjhW+IfPscxzWkDC0cv6VB/hZKvinusyE275mQa61Zpw0R
-			 Iz6lXhgVXBGGZJ5V03zsOUKjBCzdrvTLAVyHDomUMxyFDiOs6DLIF2/FfcM04ycidB
-			  0W2jE4O5ZH8C+9i3qyll2Q7s=
 Date: Wed, 12 Dec 2012 21:29:03 +0100
 From: Stephan Ferraro <contact@ferraro.net>
 To: stephan@ferraro.net
@@ -37,6 +23,7 @@ Content-Length: 442
 Lines: 14
 
 test
+äöü€
 -- 
 Best regards,
 Stephan FERRARO

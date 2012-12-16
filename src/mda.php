@@ -15,14 +15,33 @@
 # CONFIGURATION
 require_once(__DIR__.'/mda_config.php');
 
+### FUNCTIONS ###
 // My die function
 function my_die($arg) {
 	fprintf(STDERR, "Could not deliver message! ".MDAMongoDbConfig::$MONGO_CONTACT." Error reason: $arg\n");
 	exit(1);
 }
 
-use MimeMailParser\Parser;
+// Convert all items of the array to UTF-8
+// TODO: maybe we should not do it in this way, and only check messages text and html and scan for charset which is defined
+// then use iconv to convert. If charset is undefined, then convert from ASCII to UTF-8
+function make_utf8_array(&$list) {
+	foreach ($list as $key => &$value) {
+		if (is_string($value) && mb_check_encoding($value, 'UTF-8') === false) {
+			// Convert value to UTF-8
+			$value = mb_convert_encoding($value, 'UTF-8', 'auto');
+		} else {
+			if (is_array($value)) {
+				// Call recursively sub-arrays
+				make_utf8_array($value);
+			}
+		}
+	}
+}
 
+### MAIN ###
+
+use MimeMailParser\Parser;
 
 try {
 	# Init mail parse library
@@ -47,10 +66,10 @@ try {
 	$subject		= $parser->getHeader('subject');
 	$text			= $parser->getMessageBody('text');
 	$html			= $parser->getMessageBody('html');
-	//$attachments = $parser->getAttachments();
+	$attachments	= @$parser->getAttachments();
 
 	# Save message into MongoDB
-	$msg = array(
+	$msgList = array(
 		'to'			=> $to,
 		'delivered-to'	=> $delivered_to,
 		'from'			=> $from,
@@ -58,17 +77,20 @@ try {
 		'body'			=> array(
 			'text'		=> $text,
 			'html'		=> $html
-		)
+		),
+		'attachments'	=> serialize($attachments)
 	);
 
 	// Get the collection
 	$collectionObj = $db->selectCollection(MDAMongoDbConfig::$MONGO_COLLECTION);
 
+	// MongoDB accepts only UTF-8 strings stored inside, so convert non UTF-8 strings to UTF-8
+	make_utf8_array($msgList);
+
 	// Insert this new message into the collection
-	if ($collectionObj->save($msg) == false) {
+	if ($collectionObj->save($msgList) == false) {
 		my_die('save on collection failed');
 	}
-
 	// Check if there was an error
 	$lastError = $db->lastError();
 	if (!empty($lastError['err'])) {
@@ -78,6 +100,6 @@ try {
 	// End script successfully
 	exit(0);
 } catch (Exception $e) {
-	fprintf(STDERR, "Error: Mail could not be delivered. ".$e->getMessage()."\n");
+	my_die($e->getMessage());
 }
 exit(1);
