@@ -84,7 +84,7 @@ try {
 		'attachments'	=> $fileList
 	);
 
-	// Get the collection
+	// Select the collection
 	$collectionObj = $db->selectCollection(MDAMongoDbConfig::$MONGO_COLLECTION);
 
 	// MongoDB accepts only UTF-8 strings stored inside, so convert non UTF-8 strings to UTF-8
