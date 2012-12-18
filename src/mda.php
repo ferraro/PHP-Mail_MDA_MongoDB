@@ -44,10 +44,11 @@ try {
 	# Parse standard input
 	$parser->setText(file_get_contents('php://stdin'));
 
-	$delivered_to	= $parser->getHeader('delivered-to');
+	$deliveredTo	= $parser->getHeader('delivered-to');
 	$to				= $parser->getHeader('to');
 	$from			= $parser->getHeader('from');
 	$date			= $parser->getHeader('date');
+	$contentType	= $parser->getHeader('content-type');
 	// Use binary data for subject and body message, because it could be a non UTF-8 string.
 	$subject		= new MongoBinData($parser->getHeader('subject'));
 	$text			= new MongoBinData($parser->getMessageBody('text'));
@@ -74,10 +75,11 @@ try {
 
 	# Save message into MongoDB
 	$msgList = array(
-		'delivered_to'	=> $delivered_to,
+		'delivered_to'	=> $deliveredTo,
 		'to'			=> $to,
 		'from'			=> $from,
 		'date'			=> $date,
+		'content_type'	=> $contentType,
 		'subject'		=> $subject,
 		'body_text'		=> $text,
 		'body_html'		=> $html,
