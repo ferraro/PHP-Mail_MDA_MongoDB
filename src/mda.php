@@ -79,10 +79,8 @@ try {
 		'from'			=> $from,
 		'date'			=> $date,
 		'subject'		=> $subject,
-		'body'			=> array(
-			'text'		=> $text,
-			'html'		=> $html
-		),
+		'body_text'		=> $text,
+		'body_html'		=> $html,
 		'attachments'	=> $fileList
 	);
 
