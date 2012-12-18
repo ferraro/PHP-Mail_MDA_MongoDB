@@ -73,7 +73,7 @@ try {
 
 	# Save message into MongoDB
 	$msgList = array(
-		'delivered-to'	=> $delivered_to,
+		'delivered_to'	=> $delivered_to,
 		'to'			=> $to,
 		'from'			=> $from,
 		'subject'		=> $subject,
