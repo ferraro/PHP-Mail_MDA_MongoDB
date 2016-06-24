@@ -32,7 +32,7 @@ try {
 	require_once __DIR__.'/../vendor/autoload.php';
 
 	// Connect to test mongo database
-	$m = new Mongo(MDAMongoDbConfig::$MONGO_URL);
+	$m = new MongoClient(MDAMongoDbConfig::$MONGO_URL);
 	$db = $m->selectDB(MDAMongoDbConfig::$MONGO_DB_NAME);
 	if (MDAMongoDbConfig::$MONGO_USE_AUTH) {
 		$db->authenticate(MDAMongoDbConfig::$MONGO_USER, MDAMongoDbConfig::$MONGO_PASSWORD);
